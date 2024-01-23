@@ -1,0 +1,159 @@
+
+
+/* Hero Header Styles */
+.hero-header {
+    position: relative;
+    background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)), 
+                url('/assets/Image/bg-hero.jpg') center center / cover no-repeat;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 5rem 0;
+    margin-top: 50px;
+}
+
+.hero-header h1 {
+    font-size: 2.5rem; /* Adjust the font size based on your design */
+    margin-bottom: 1rem;
+}
+
+.hero-header p {
+    font-size: 1.5rem; /* Adjust the font size based on your design */
+    margin-bottom: 2rem;
+}
+
+/* Input and Button Styles */
+.hero-header input {
+    font-size: 1rem; /* Adjust the font size based on your design */
+    border: 0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.hero-header button {
+    font-size: 1rem; /* Adjust the font size based on your design */
+    border-radius: 25px;
+    padding: 8px 20px;
+}
+
+/* Animation Styles */
+.animated {
+    animation-duration: 1s; /* Adjust the animation duration based on your preference */
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* about.component.css */
+
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 90px;
+  }
+  
+  h1 {
+    color: #007bff; /* Adjust the color as needed */
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  .features {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust the color as needed */
+    color: #fff; /* Adjust the color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0056b3; /* Adjust the color as needed */
+  }
+  
+  .container{
+    margin-top: 50px;
+  }
+
+
+  /* Services */
+
+.container-xxl {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #8e5c5c;
+    color: #e74c3c;
+    display: inline-block;
+  }
+  
+  .service-item {
+    background-color: #47cb5d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-item .p-4 {
+    text-align: center;
+  }
+  
+  .service-item i {
+    font-size: 3rem;
+    color: #f50a0a;
+  }
+  
+  .service-item h5 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  .service-item p {
+    color: #555;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .service-item {
+      margin-bottom: 2rem;
+    }
+  }
+  

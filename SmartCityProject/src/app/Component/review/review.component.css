@@ -1,0 +1,40 @@
+.hero-header {
+    position: relative;
+    background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
+                url('/assets/Image/bg-hero.jpg') center center / cover no-repeat;
+    color: white; /* Adjust text color based on your design */
+    text-align: center;
+    padding: 5rem 0; /* Adjust padding based on your design */
+    margin-top: 60px;
+  }
+  
+  /* Styles for the text and breadcrumb */
+  .hero-header h1 {
+    font-size: 3rem; /* Adjust the font size based on your design */
+    margin-bottom: 1rem;
+  }
+  
+  .hero-header .breadcrumb-item {
+    color: white; /* Adjust breadcrumb text color based on your design */
+  }
+  
+  /* Animation styles */
+  .animated {
+    animation-duration: 1s; /* Adjust the animation duration based on your preference */
+  }
+  
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  @keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  

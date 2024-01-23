@@ -1,0 +1,34 @@
+<div class="appointment-container">
+    <h2>Book an Appointment</h2>
+  
+    <form (ngSubmit)="submitAppointment()">
+  
+      <div class="form-group">
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" [(ngModel)]="appointmentDetails.appointmentDate" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="appointmentDetails.email" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="hospitalName">Hospital Name:</label>
+        <input type="text" id="hospitalName" name="hospitalName" [(ngModel)]="appointmentDetails.hospitalName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="services">Services:</label>
+        <textarea id="services" name="services" [(ngModel)]="appointmentDetails.services" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="timeSlot">Time Slot:</label>
+        <input type="text" id="timeSlot" name="timeSlot" [(ngModel)]="appointmentDetails.timeSlot" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit Appointment</button>
+    </form>
+  </div>
+  

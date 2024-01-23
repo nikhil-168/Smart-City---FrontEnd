@@ -1,0 +1,124 @@
+.hero-header {
+    position: relative;
+    background: linear-gradient(rgba(20, 20, 31, 0.7), rgba(20, 20, 31, 0.7)),
+                url('/assets/Image/bg-hero.jpg') center center / cover no-repeat;
+    color: white; /* Adjust text color based on your design */
+    text-align: center;
+    padding: 5rem 0; /* Adjust padding based on your design */
+    margin-top: 55px;
+  }
+  
+  /* Styles for the text and breadcrumb */
+  .hero-header h1 {
+    font-size: 3rem; /* Adjust the font size based on your design */
+    margin-bottom: 1rem;
+  }
+  
+  .hero-header .breadcrumb-item {
+    color: white; /* Adjust breadcrumb text color based on your design */
+  }
+  
+  /* Animation styles */
+  .animated {
+    animation-duration: 1s; /* Adjust the animation duration based on your preference */
+  }
+  
+  .slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  @keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+ 
+  
+  /* login.component.css */
+
+.login-container {
+  background: linear-gradient(45deg, hwb(0 100% 0%), hsl(280, 23%, 97%));
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #363434;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  margin-bottom: 5vh;
+
+}
+
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: hsl(0, 24%, 93%);
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.align-items-center {
+  align-items:left;
+}
+
+input[type="checkbox"] {
+  margin-right: 2px;           
+}
