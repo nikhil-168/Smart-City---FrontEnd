@@ -21,6 +21,7 @@ export class RegistrationComponent {
   citizen = new Citizen();
 
   onSubmit() {
+    this.citizen.email = ""+localStorage.getItem("Email");
     this.submitted = true;
     this.add();
   }
@@ -30,19 +31,20 @@ export class RegistrationComponent {
         console.log('Registration Response:', response);
 
         // Assuming the token is sent as a response header named 'Authorization'
-        const token = response.headers.get('Authorization');
+        const token = response.body.message;
 
-        if (token) {
+        if (token!=null) {
           // Handle the token, e.g., save it to localStorage, navigate to another page, etc.
           console.log('Received Token:', token);
 
           // Example: Save token to localStorage
           localStorage.setItem('token', token);
 
-          console.log('Navigating to login page');
+          console.log('Navigating to Health Service page');
 
 
           // Example: Navigate to another page (replace with your actual route)
+          // window.location.reload();
            this.router.navigate(['/HealthService']);
         }
       },

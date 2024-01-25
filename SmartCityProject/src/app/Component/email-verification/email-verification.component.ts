@@ -39,7 +39,7 @@ export class EmailVerificationComponent {
       console.log('OTP Verification Successful');
       this.verificationSuccess = true;
       this.verificationError = ''; // Clear any previous error messages
-
+      localStorage.setItem("Email", this.email);
       this.router.navigate(['/Register']);
 
     } else {
