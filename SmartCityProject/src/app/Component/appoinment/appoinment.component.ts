@@ -37,10 +37,10 @@ export class AppoinmentComponent {
     console.log('Appointment Details:', this.appointmentDetails);
     this.appointmentService.bookAppointment(this.appointmentDetails).subscribe(
       (response: any) => {
-        console.log('Registration Response:', response);
+        console.log('Registration Response:', response.message);
 
 
-        if (response.status==200) {
+        if (response.message=="Appointment booked successfully....") {
           // Handle the token, e.g., save it to localStorage, navigate to another page, etc.
           alert("Appointment booked successfully")
           this.router.navigate(["/Home"])

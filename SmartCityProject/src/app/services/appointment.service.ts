@@ -19,13 +19,15 @@ export class AppointmentService {
       'Authorization': 'Bearer '+localStorage.getItem("token"), // Add any additional headers as needed
     });
 
+    console.log("JWT TOKEN:"+localStorage.getItem("token"))
+
     //Set headers in request options
     const requestOptions = {
       headers: headers,
     }
 
     return this.http.post(
-      `${this.baseUrl}/appointment`,requestOptions, citizen
+      `${this.baseUrl}/appointment`, citizen, requestOptions
     );
   }
 }
