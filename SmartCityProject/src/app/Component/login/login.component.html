@@ -39,12 +39,12 @@
         <form>
           <div class="input-group">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required placeholder="Enter your Username">
+            <input type="text" id="username" name="username" required placeholder="Enter your Username" [(ngModel)]="email">
           </div>
     
           <div class="input-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required placeholder="Enter your password" >
+            <input type="password" id="password" name="password" required placeholder="Enter your password" [(ngModel)]="password" >
           </div>
 
 
@@ -57,7 +57,7 @@
   
   
     
-          <button type="submit">Login</button>
+          <button type="submit" (click)="loginCitizen()">Login</button>
             <div style="color: white;  font-size: 20px; margin-left: 25%; margin-top: 10px;">
               New User? <a [routerLink]="['/Register']">SignUp Here</a>
               
