@@ -1,82 +1,20 @@
-<div id="background">
+<!-- health-service.component.html -->
+<div id="background" *ngIf="hospitals">
   <h1>Welcome to Hospital Appointment Booking</h1>
 
-  <div id="hospitals">
-    <div class="hospital" onclick="openForm('hospital1-form')">
-      <img src="/assets/Image/Ruby.jpg" alt="Hospital 1">
-      <h3>Hospital 1</h3>
-      <p>Normal details about Hospital 1</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <!-- <a [routerLink]="['/Login']">LogIn Here</a> -->
-
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 2">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment"  class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 3">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 4">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment"class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 5">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 6">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment"  class="appointment-link">Book an Appointment</a>
-    </div>
-
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 7">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 8">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 9">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
-    </div>
-
-    <div class="hospital" onclick="openForm('hospital2-form')">
-      <img src="/assets/Image/Sancheti.jpg" alt="Hospital 10">
-      <h3>Hospital 2</h3>
-      <p>Normal details about Hospital 2</p>
-      <a routerLink="/Appointment" class="appointment-link">Book an Appointment</a>
+  <div id="hospitals" *ngFor="let item of hospitals">
+    <div class="hospital">
+      <img src="{{item.img}}" alt="Hospital Image">
+      <h3>{{ item.name }}</h3>
+      <p>Contact: {{item.contactNumber}}</p>
+      <p>Services Available: {{item.servicesOffered}}</p>
+      <p>Address: {{ item.address }}</p>
+      
+      <button type="submit" (click)="bookAppointment({item})">Book an Appointment</button>
     </div>
   </div>
 </div>
+
 
 <!-- Google Forms Modal -->
 <div id="formModal" class="modal">
