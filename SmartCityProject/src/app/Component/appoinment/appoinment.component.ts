@@ -18,6 +18,8 @@ export class AppoinmentComponent {
     slot: ''
   };
 
+  minDate = new Date().toISOString().split('T')[0];
+
   constructor(private appointmentService: AppointmentService,private router: Router) {
     const state = this.router.getCurrentNavigation()?.extras.state;
     if (state && 'hospital' in state) {
